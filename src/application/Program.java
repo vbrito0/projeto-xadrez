@@ -40,8 +40,12 @@ public class Program {
 				}
 				
 				if(partidaXadrez.getPromovido() != null) {
-					System.out.print("Escolha peças para promoção (B/C/T/Q): ");
-					String tipo = sc.nextLine();
+					System.out.print("Digite a peça para trocar (B/C/T/Q): ");
+					String tipo = sc.nextLine().toUpperCase();
+					while(!tipo.equals("B") && !tipo.equals("C") & !tipo.equals("T") & !tipo.equals("Q")) {
+						System.out.print("Valor inválido! Digite a peça para trocar (B/C/T/Q): ");
+						tipo = sc.nextLine().toUpperCase();
+					}
 					partidaXadrez.trocarPecaPromovida(tipo);
 				}
 				
