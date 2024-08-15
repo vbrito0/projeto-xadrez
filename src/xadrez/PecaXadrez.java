@@ -1,11 +1,13 @@
 package xadrez;
 
 import jogotabuleiro.Peca;
+import jogotabuleiro.Posicao;
 import jogotabuleiro.Tabuleiro;
 
 public abstract class PecaXadrez extends Peca{
 
 	private Cor cor;
+	private int qtdMovimentos;
 
 	public PecaXadrez(Tabuleiro tabuleiro, Cor cor) {
 		super(tabuleiro);
@@ -16,8 +18,24 @@ public abstract class PecaXadrez extends Peca{
 		return cor;
 	}
 
-	public void setCor(Cor cor) {
-		this.cor = cor;
+	public int getQtdMovimento() {
+		return qtdMovimentos;
 	}
 	
+	public void incrementarQtdMovimento() {
+		qtdMovimentos++;
+	}
+	
+	public void decrementarQtdMovimento() {
+		qtdMovimentos--;
+	}
+	
+	public PosicaoXadrez getPosicaoXadrez() {
+		return PosicaoXadrez.fromPosicao(posicao);
+	}
+	
+	protected boolean existePecaAdversaria(Posicao posicao) {
+		PecaXadrez p = (PecaXadrez) getTabuleiro().peca(posicao);
+		return p != null && p.getCor() != cor;
+	}
 }
