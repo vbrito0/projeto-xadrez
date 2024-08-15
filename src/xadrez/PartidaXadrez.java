@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import jogotabuleiro.Peca;
 import jogotabuleiro.Posicao;
 import jogotabuleiro.Tabuleiro;
+import xadrez.pecas.Bispo;
+import xadrez.pecas.Cavalo;
+import xadrez.pecas.Peao;
+import xadrez.pecas.Rainha;
 import xadrez.pecas.Rei;
 import xadrez.pecas.Torre;
 
@@ -190,37 +194,37 @@ public class PartidaXadrez {
 	
 	private void initialSetup() {
 		lugarNovaPeca('a', 1, new Torre(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('b', 1, new Knight(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('c', 1, new Bishop(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('d', 1, new Queen(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('e', 1, new King(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('f', 1, new Bishop(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('g', 1, new Knight(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('b', 1, new Cavalo(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('c', 1, new Bispo(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('d', 1, new Rainha(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('f', 1, new Bispo(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('g', 1, new Cavalo(tabuleiro, Cor.BRANCO));
         lugarNovaPeca('h', 1, new Torre(tabuleiro, Cor.BRANCO));
-//        lugarNovaPeca('a', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('b', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('c', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('d', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('e', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('f', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('g', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
-//        lugarNovaPeca('h', 2, new Pawn(tabuleiro, Cor.BRANCO, this));
+        lugarNovaPeca('a', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('b', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('c', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('d', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('e', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('f', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('g', 2, new Peao(tabuleiro, Cor.BRANCO));
+        lugarNovaPeca('h', 2, new Peao(tabuleiro, Cor.BRANCO));
 
         lugarNovaPeca('a', 8, new Torre(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('b', 8, new Knight(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('c', 8, new Bishop(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('d', 8, new Queen(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('e', 8, new King(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('f', 8, new Bishop(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('g', 8, new Knight(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('b', 8, new Cavalo(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('c', 8, new Bispo(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('d', 8, new Rainha(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('f', 8, new Bispo(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('g', 8, new Cavalo(tabuleiro, Cor.PRETO));
         lugarNovaPeca('h', 8, new Torre(tabuleiro, Cor.PRETO));
-//        lugarNovaPeca('a', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('b', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('c', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('d', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('e', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('f', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('g', 7, new Pawn(tabuleiro, Cor.PRETO, this));
-//        lugarNovaPeca('h', 7, new Pawn(tabuleiro, Cor.PRETO, this));
+        lugarNovaPeca('a', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('b', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('c', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('d', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('e', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('f', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('g', 7, new Peao(tabuleiro, Cor.PRETO));
+        lugarNovaPeca('h', 7, new Peao(tabuleiro, Cor.PRETO));
 	}
 }
